@@ -16,18 +16,19 @@ window=tk.Tk()
 window.geometry("700x700")
 window.title("Login System")
 
-ik=Image.open("phebe-tan-G0H58Z5aPog-unsplash123.jpg")
+ik=Image.open("LoginBg1.2.jpg")
 BG=ImageTk.PhotoImage(ik)
 
 ig=PhotoImage(file="logo.png")
-ig2=PhotoImage(file="person logo4.png")
+ig2=PhotoImage(file="Logo 1.5.png")
 ig3=PhotoImage(file="username.png")
 ig4=PhotoImage(file="iconfinder_icons_password_1564520.png")
 
+
 lb=Label(window,image=BG).place(x=1,y=0)
 label=Label(window,image=ig).place(x=60,y=180)
-label8=Label(window,text="Restaurent management system",font=("algerian",45),fg="red").place(x=300,y=10)
-label2=Label(window,text="Login System",font=("century",20),fg="green",bg="yellow",relief=GROOVE).place(x=750,y=150)
+label8=Label(window,text="Restaurent billing system",font=("algerian",45),fg="Black").place(x=400,y=10)
+label2=Label(window,text="Login System Page",font=("century",20),fg="White",bg="Black",relief=GROOVE).place(x=655,y=150)
 frame=Frame(window,bg="white").place(x=700)
 
 label3=Label(frame,image=ig2).place(x=710,y=220)
@@ -37,11 +38,11 @@ passwd=StringVar()
 
 
 
-label5=Label(frame,text="Username:",font=("arial bold",15),bg="white",fg="black",pady=12,relief=GROOVE).place(x=655,y=503)
+label5=Label(frame,text="Username:",font=("arial bold",15),bg="Black",fg="White",pady=12,relief=GROOVE).place(x=655,y=503)
 entry=tk.Entry(frame,width=30,textvariable=uname,bd=10,font=("",15),relief=GROOVE).place(x=770,y=512)
 
 label6=Label(frame,image=ig4,relief=GROOVE).place(x=600,y=600)
-label7=Label(frame,text="Password:",font=("arial bold",15),bg="white",fg="black",pady=12,relief=GROOVE).place(x=655,y=603)
+label7=Label(frame,text="Password:",font=("arial bold",15),bg="Black",fg="White",pady=12,relief=GROOVE).place(x=655,y=603)
 entry=Entry(frame,width=30,textvariable=passwd,bd=10,font=("",15),relief=GROOVE).place(x=770,y=612)
 def log():
     if(uname.get()=="" or passwd.get()==""):
@@ -50,17 +51,17 @@ def log():
         panel3 = Toplevel()
         panel3.geometry("1000x1000")
         panel3.title("Orders")
-        i = Image.open("main course.jpg")
+        i = Image.open("Main 1.2.jpg")
         rend = ImageTk.PhotoImage(i)
         lbb = Label(panel3, image=rend)
         lbb.image = rend
         lbb.place(x=530, y=240)
-        ii = Image.open("BEVERAGES.jpg")
+        ii = Image.open("Beverages 1.1.jpg")
         ren = ImageTk.PhotoImage(ii)
         lbb1 = Label(panel3, image=ren)
         lbb1.image = ren
         lbb1.place(x=940, y=240)
-        iii = Image.open("starter.jpg")
+        iii = Image.open("Starters 1.1.jpg")
         rende = ImageTk.PhotoImage(iii)
         lbb2 = Label(panel3, image=rende)
         lbb2.image = rende
@@ -86,18 +87,18 @@ def log():
         Input15 = IntVar()
 
         l = Label(panel3, text="ajantha Restaurent", font=("algerian", 30), fg="white", bd=10, relief=GROOVE,
-                     bg="grey", pady=5).place(x=400, y=20)
+                     bg="Black", pady=5).place(x=400, y=20)
         l1 = Label(panel3, text="Menu Card", font=("Harlow Solid Italic", 20), fg="white", bd=8, relief=GROOVE,
-                      bg="sky blue", pady=5).place(x=550, y=107)
+                      bg="Black", pady=5).place(x=550, y=107)
         l2 = Label(panel3, text="STARTERS", font=("Lucida Calligraphy", 15), fg="white", bd=8, relief=GROOVE,
-                      bg="purple", pady=5).place(x=100, y=180)
+                      bg="Black", pady=5).place(x=100, y=180)
         l3 = Label(panel3, text="MAIN COURSE", font=("Lucida Calligraphy", 15), fg="white", bd=8, relief=GROOVE,
-                      bg="orange", pady=5).place(x=530, y=180)
+                      bg="Black", pady=5).place(x=530, y=180)
         l4 = Label(panel3, text="BEVERAGES", font=("Lucida Calligraphy", 15), fg="white", bd=8, relief=GROOVE,
-                      bg="green", pady=5).place(x=950, y=180)
+                      bg="Black", pady=5).place(x=950, y=180)
 
         ###STARTERS##
-        l5 = Label(panel3, text="MASALA PAPAD  ? 70/-", font=("Bookman Old Style", 10), fg="black", bd=3,
+        l5 = Label(panel3, text="MASALA PAPAD  ? 70/-", font=("Bookman Old Style", 10), fg="Black", bd=3,
                       pady=5).place(x=50, y=420)
         entry2 = Entry(panel3, textvariable=Input, bg="powder blue", relief=GROOVE, bd=7).place(x=60, y=450)
         l6 = Label(panel3, text="PANEER CRISPY  ? 170/-", font=("Bookman Old Style", 10), fg="black", bd=3,
@@ -149,6 +150,8 @@ def log():
                        pady=5).place(x=950, y=540)
         entry16 = Entry(panel3, textvariable=Input14, bg="powder blue", relief=GROOVE, bd=7).place(x=970, y=570)
 
+
+
         def bill_no():
             x = random.randint(10908, 500879)
             ref = x
@@ -173,12 +176,12 @@ def log():
             Input15.set(0)
             var.set(0.0)
             var1.set(" ")
-        bill = Button(panel3, text="Bill No:", font=("Bookman Old Style", 10), command=bill_no, fg="black", bd=3,
-                         bg="Orange", pady=5).place(x=50, y=48)
+        bill = Button(panel3, text="Bill No:", font=("Bookman Old Style", 10), command=bill_no, fg="White", bd=3,
+                         bg="Black", pady=5).place(x=50, y=48)
         entry19 = Entry(panel3, textvariable=Input15, bg="white", font=("arial bold", 10), relief=GROOVE,
                            bd=7).place(x=130, y=48)
         localtime = time.asctime(time.localtime(time.time()))
-        labelinfo = Label(panel3, text=localtime, font=("arial bold", 20), fg="red").place(x=1000, y=48)
+        labelinfo = Label(panel3, text=localtime, font=("arial bold", 20), fg="black").place(x=1000, y=48)
         res = Button(panel3, text="RESET", font=("Bookman Old Style", 10), command=reset, fg="black", bd=3,
                         bg="powder blue", pady=5).place(x=420, y=690)
         def Totl():
@@ -273,7 +276,7 @@ def log():
     else:
         messagebox.showerror("Error", "Invalid Username or Password")
 
-btn=Button(frame,text="Login",bg="blue",command=log,fg="white",font=("arial bold",15),relief=GROOVE).place(x=800,y=700)
+btn=Button(frame,text="Login",bg="black",command=log,fg="white",font=("arial bold",15),relief=GROOVE).place(x=800,y=700)
 
 
 window.mainloop()
